@@ -1,0 +1,46 @@
+/* Selectors : 
+  1- Tag Name 
+  2- class .nav-list
+  3- id #container
+*/
+
+/* 
+margin : space between element and the parent
+padding: space between element and the child
+border: border size
+*/
+
+/* display flex */
+
+body {
+  position: relative;
+  margin: 0;
+  background-image: url("/images/headerBg.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+#container {
+  position: relative;
+  margin: auto;
+  width: 1200px;
+}
+
+
+header{
+  padding-top: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+nav{
+  display: inline;
+}
+.nav-ul{
+  display: flex;
+  justify-content: space-evenly;
+  width: 550px;
+  padding: 0;
+}
+.nav-list{
+  list-style: none;
+}
