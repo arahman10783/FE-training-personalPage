@@ -10,7 +10,17 @@ padding: space between element and the child
 border: border size
 */
 
-/* display flex */
+/* display */
+/*
+block: take all row space. no elements beside it.
+inline: accept elements to be beside it, its content width 
+
+flex : "FlexBox"
+1- Flex container
+  flex-direction
+  justify-content
+  flex-wrap
+  */
 
 body {
   position: relative;
@@ -18,6 +28,7 @@ body {
   background-image: url("/images/headerBg.svg");
   background-repeat: no-repeat;
   background-position: top right;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #container {
@@ -32,15 +43,110 @@ header{
   display: flex;
   justify-content: space-between;
 }
+
 nav{
   display: inline;
 }
+
 .nav-ul{
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap ;
   justify-content: space-evenly;
-  width: 550px;
+  width: 500px;
   padding: 0;
 }
 .nav-list{
   list-style: none;
+  font-size: 16px;
+}
+
+
+.main-banner{
+  display: flex;
+  justify-content: space-between;
+  background-image: url("/images/traveller-img.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.slide-description{
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  width: 420px;
+}
+
+.big-title{
+  position: relative;
+}
+
+.decore-line{
+  position: absolute;
+  top: 50px;
+  right: -146px;
+  z-index: 0;
+}
+
+.slide-description h4{
+  color: #DF6951;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.slide-description h1{
+  position: relative;
+  font-family:'Times New Roman', Times, serif ;
+  font-size: 69px;
+  color: #181E4B;
+  margin-block: 24px; /* equal margin-top and margin-bottom */
+  line-height: 70px;
+  z-index: 1;
+}
+
+.slide-description p{
+  color: #5E6282;
+  font-size: 16px;
+  margin-block: 6px; /* equal margin-top and margin-bottom */
+  line-height: 30px;
+}
+
+.slide-cta{
+  margin-top: 28px
+}
+
+.find-out-button{
+  border-width: 0px;
+  background-color: #F1A501;
+  width: 170px;
+  height: 60px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #FFF;
+  border-radius: 10px; /* corners radius 10px 10px 10px 10px */ 
+  box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15); /* x y blur color */
+}
+
+.play-demo-button{
+  position: relative;
+  border-width: 0px;
+  background-color: transparent;
+  width: 170px;
+  height: 60px;
+  font-size: 17px;
+  margin-left: 44px;
+}
+
+.play-demo-button img{
+  position: absolute;
+  display: inline;
+  top: -12px;
+  left: -25px;
+}
+
+.play-demo-button span{
+  position: relative;
+  left: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  color: #686D77;
 }
