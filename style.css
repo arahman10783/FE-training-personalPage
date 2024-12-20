@@ -29,6 +29,7 @@ body {
   background-repeat: no-repeat;
   background-position: top right;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(221, 221, 221,0.2);
 }
 
 #container {
@@ -77,6 +78,12 @@ nav{
   width: 420px;
 }
 
+.slide-description h4{
+  color: #DF6951;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
 .big-title{
   position: relative;
 }
@@ -86,12 +93,6 @@ nav{
   top: 50px;
   right: -146px;
   z-index: 0;
-}
-
-.slide-description h4{
-  color: #DF6951;
-  text-transform: uppercase;
-  font-size: 18px;
 }
 
 .slide-description h1{
@@ -149,4 +150,81 @@ nav{
   font-family:Arial, Helvetica, sans-serif;
   font-size: 17px;
   color: #686D77;
+}
+
+.categories{
+  position: relative;
+  margin-top: 100px;
+}
+
+.ctegory-bg{
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.category-title{
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #5E6282;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.categories h2{
+  font-family:'Times New Roman', Times, serif;
+  font-size: 50px;
+  color: #14183E;
+  text-align: center;
+  margin-block: 10px;
+}
+
+.categories-container{
+  position: relative;
+  display: flex;
+  margin: 50px;
+  justify-content: space-between;
+}
+
+.category-card{
+  position: relative;
+  background-color: transparent;
+  width: 268px;
+  height: 314px;
+  border-radius: 36px;
+  text-align: center;
+}
+
+.category-card:hover /* :hover => when mouse move over the element*/ {
+  background-color: #FFF;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.2);
+}
+
+.category-image-container{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.category-image-container img{
+    position: relative;
+    bottom: 0;
+}
+
+.category-card h4{
+  margin-block: 15px;
+  color: 1E1D4C;
+}
+
+.category-card p{
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  max-width: 180px;
+  margin: auto;
+  color: #5E6282;
+  line-height: 28px;
+  
 }
