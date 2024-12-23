@@ -29,7 +29,7 @@ body {
   background-repeat: no-repeat;
   background-position: top right;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(221, 221, 221,0.2);
+  background-color: rgba(221, 221, 221, 0.2);
 }
 
 #container {
@@ -69,11 +69,12 @@ nav{
   background-image: url("/images/traveller-img.png");
   background-repeat: no-repeat;
   background-position: right top;
+  background-size: contain;
 }
 
 .slide-description{
   position: relative;
-  padding-top: 150px;
+  padding-top: 75px;
   padding-bottom: 150px;
   width: 420px;
 }
@@ -163,7 +164,7 @@ nav{
   right: 20px;
 }
 
-.category-title{
+.section-title{
   font-size: 18px;
   text-transform: uppercase;
   color: #5E6282;
@@ -171,7 +172,7 @@ nav{
   margin-bottom: 0;
 }
 
-.categories h2{
+.section-heading{
   font-family:'Times New Roman', Times, serif;
   font-size: 50px;
   color: #14183E;
@@ -188,16 +189,21 @@ nav{
 
 .category-card{
   position: relative;
-  background-color: transparent;
+  background-color: rgba(221, 221, 221, 0);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   width: 268px;
   height: 314px;
   border-radius: 36px;
   text-align: center;
+  transition-property: background-color,  box-shadow;
+  transition-duration: 2s;
 }
 
 .category-card:hover /* :hover => when mouse move over the element*/ {
-  background-color: #FFF;
+  background-color: rgba(255, 255, 255,1);
   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.2);
+  transition-property: background-color,  box-shadow;
+  transition-duration: 2s;
 }
 
 .category-image-container{
@@ -228,3 +234,160 @@ nav{
   line-height: 28px;
   
 }
+
+.top-selling{
+  margin-top: 123px;
+  margin-bottom: 132px;
+}
+
+.top-selling-container{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 60px;
+}
+
+.top-bg{
+  position: absolute;
+  right: 10px;
+  bottom: 41px;
+  z-index: 0;
+}
+
+.top-selling-card{
+  width: 314px;
+  height: 457px;
+  border-radius: 24px;
+  background-color: #FFF;
+  overflow: hidden;
+  box-shadow: 0 100px 80px rgba(0,0,0,0.02);
+  z-index: 1;
+}
+
+.trip-pic{
+  height: 327px
+}
+
+.trip-details{
+  padding: 25px;
+  font-size: 18px;
+  color: #5E6282;
+}
+
+.trip-details-price{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.trip-details-duration span{
+  margin-left: 12px;
+}
+
+.trip-details-duration::before{
+  content: url("/images/Vector.svg");
+  position: relative;
+  top: 2px;
+}
+
+.booking{
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-steps{
+  width: 50%;
+  margin-bottom: 130px;
+}
+/*.booking-steps .section-title, .booking-steps .section-heading*/
+.booking-steps :where(.section-title, .section-heading){  
+  text-align: left;
+}
+
+.booking-step{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  width: 400px;
+  color: #5E6282;
+}
+
+.booking-step-icon{
+  width: 48px;
+}
+
+.booking-step-icon{
+  transform: rotate(0deg);
+  transition: transform 1s;
+}
+
+.booking-step-icon:hover{
+  transform: rotate(45deg);
+  transition: transform 1s;
+}
+
+.booking-step-description{
+  width: 330px;
+}
+.booking-step-description p{
+  margin-block: 4px;
+}
+
+.booking-card{
+  width: 40%;
+}
+
+.booking-card img{
+  width: 100%;
+  /* transition-property: width;
+  /*transition-duration: 2s;
+  /* transition-delay: 1s; */
+ /*transition-timing-function: ease; */
+  transition: width 2s 1s ease; /* property duration delay function*/
+}
+
+.booking-card img:hover{
+  width: 120%;
+  transition: width 2s 1s ease; /* property duration delay function*/
+  
+}
+
+
+
+footer{
+  text-align: center;
+  color: #5E6282;
+}
+
+/*
+transition
+transition-delay => time before transition 
+transition-duration => time for transition 
+transition-property => property (height, width, background, ..)
+transition-timing-function => how ?
+  ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+  linear - specifies a transition effect with the same speed from start to end
+  ease-in - specifies a transition effect with a slow start
+  ease-out - specifies a transition effect with a slow end
+  ease-in-out - specifies a transition effect with a slow start and end
+  cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function =>designer
+
+*/
+
+/*
+transform 2D
+
+translate()  x , y ex: 30px, 50px
+rotate() 45deg
+scaleX() scale x2 x0.5
+scaleY()
+scale() 
+skewX()
+skewY()
+skew()
+matrix() matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+
+
+*/
