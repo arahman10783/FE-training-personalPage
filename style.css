@@ -22,14 +22,43 @@ flex : "FlexBox"
   flex-wrap
   */
 
+
+/* 
+finding path
+  path = / => first level of the server // not preferred to be used 
+  path = ./ => current level of the file = folder-name ex (./images = images)
+  path = ../ => parent level of the file
+*/
+
+:root{
+  --site-font-color : #5E6282;
+  --big-heading-font: Volkhov, sans-serif
+}
+
+@font-face {
+  font-family: Volkhov;
+  src: url("fonts/Volkhov.ttf");
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("fonts/OpenSans.ttf");
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("fonts/Poppins.ttf");
+}
+
 body {
   position: relative;
   margin: 0;
-  background-image: url("/images/headerBg.svg");
+  background-image: url("images/headerBg.svg");
   background-repeat: no-repeat;
   background-position: top right;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, sans-serif;
   background-color: rgba(221, 221, 221, 0.2);
+  overflow-x: hidden;
 }
 
 #container {
@@ -62,14 +91,30 @@ nav{
   font-size: 16px;
 }
 
-
 .main-banner{
+  position: relative;
   display: flex;
   justify-content: space-between;
-  background-image: url("/images/traveller-img.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: contain;
+}
+
+.traveler-img{
+  position: absolute;
+  right: 50px;
+  height: 90%;
+  /* animation-name: bannerImage;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-direction: normal; */
+  animation: bannerImage 5s ease 0.5s 1 normal both;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  
+}
+
+.traveler-img:hover{
+  animation-play-state: paused;
 }
 
 .slide-description{
@@ -98,8 +143,8 @@ nav{
 
 .slide-description h1{
   position: relative;
-  font-family:'Times New Roman', Times, serif ;
-  font-size: 69px;
+  font-family: var(--big-heading-font) ;
+  font-size: 59px;
   color: #181E4B;
   margin-block: 24px; /* equal margin-top and margin-bottom */
   line-height: 70px;
@@ -107,7 +152,7 @@ nav{
 }
 
 .slide-description p{
-  color: #5E6282;
+  color: var(--site-font-color);
   font-size: 16px;
   margin-block: 6px; /* equal margin-top and margin-bottom */
   line-height: 30px;
@@ -122,7 +167,7 @@ nav{
   background-color: #F1A501;
   width: 170px;
   height: 60px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Poppins, sans-serif;
   color: #FFF;
   border-radius: 10px; /* corners radius 10px 10px 10px 10px */ 
   box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15); /* x y blur color */
@@ -148,7 +193,7 @@ nav{
 .play-demo-button span{
   position: relative;
   left: 20px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Poppins, sans-serif;
   font-size: 17px;
   color: #686D77;
 }
@@ -167,13 +212,13 @@ nav{
 .section-title{
   font-size: 18px;
   text-transform: uppercase;
-  color: #5E6282;
+  color: var(--site-font-color);
   text-align: center;
   margin-bottom: 0;
 }
 
 .section-heading{
-  font-family:'Times New Roman', Times, serif;
+  font-family: var(--big-heading-font);
   font-size: 50px;
   color: #14183E;
   text-align: center;
@@ -220,8 +265,9 @@ nav{
 }
 
 .category-card h4{
+  font-family: OpenSans, sans-serif;
   margin-block: 15px;
-  color: 1E1D4C;
+  color: #1E1D4C;
 }
 
 .category-card p{
@@ -230,7 +276,7 @@ nav{
   margin-bottom: 0px;
   max-width: 180px;
   margin: auto;
-  color: #5E6282;
+  color: var(--site-font-color);
   line-height: 28px;
   
 }
@@ -272,7 +318,7 @@ nav{
 .trip-details{
   padding: 25px;
   font-size: 18px;
-  color: #5E6282;
+  color: var(--site-font-color);
 }
 
 .trip-details-price{
@@ -287,7 +333,7 @@ nav{
 }
 
 .trip-details-duration::before{
-  content: url("/images/Vector.svg");
+  content: url("images/Vector.svg");
   position: relative;
   top: 2px;
 }
@@ -311,7 +357,7 @@ nav{
   justify-content: space-between;
   margin-top: 48px;
   width: 400px;
-  color: #5E6282;
+  color: var(--site-font-color);
 }
 
 .booking-step-icon{
@@ -358,7 +404,7 @@ nav{
 
 footer{
   text-align: center;
-  color: #5E6282;
+  color: var(--site-font-color);
 }
 
 /*
@@ -388,6 +434,18 @@ skewX()
 skewY()
 skew()
 matrix() matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
-
-
 */
+
+@keyframes bannerImage {
+  0%{
+    right: -700px;
+    opacity: 0;
+  }
+  50%{
+    opacity: 100%;
+  }
+  100%{
+    right: 50px;
+    opacity: 100%;
+  }
+}
