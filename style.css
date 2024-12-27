@@ -88,7 +88,7 @@ nav{
 }
 .nav-list{
   list-style: none;
-  font-size: 16px;
+  font-size: 1em; /* default font size of the browser = 16 px*/
 }
 
 .main-banner{
@@ -108,7 +108,7 @@ nav{
   animation-iteration-count: 1;
   animation-fill-mode: both;
   animation-direction: normal; */
-  animation: bannerImage 5s ease 0.5s 1 normal both;
+  /* animation: bannerImage 5s ease 0.5s 1 normal both; */
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
   
 }
@@ -144,7 +144,7 @@ nav{
 .slide-description h1{
   position: relative;
   font-family: var(--big-heading-font) ;
-  font-size: 59px;
+  font-size: 3.5em; 
   color: #181E4B;
   margin-block: 24px; /* equal margin-top and margin-bottom */
   line-height: 70px;
@@ -153,7 +153,7 @@ nav{
 
 .slide-description p{
   color: var(--site-font-color);
-  font-size: 16px;
+  font-size: 1em;
   margin-block: 6px; /* equal margin-top and margin-bottom */
   line-height: 30px;
 }
@@ -179,7 +179,7 @@ nav{
   background-color: transparent;
   width: 170px;
   height: 60px;
-  font-size: 17px;
+  font-size: 1em;
   margin-left: 44px;
 }
 
@@ -194,7 +194,7 @@ nav{
   position: relative;
   left: 20px;
   font-family: Poppins, sans-serif;
-  font-size: 17px;
+  font-size: 1em;
   color: #686D77;
 }
 
@@ -210,7 +210,7 @@ nav{
 }
 
 .section-title{
-  font-size: 18px;
+  font-size: 1em;
   text-transform: uppercase;
   color: var(--site-font-color);
   text-align: center;
@@ -219,7 +219,7 @@ nav{
 
 .section-heading{
   font-family: var(--big-heading-font);
-  font-size: 50px;
+  font-size: 3em;
   color: #14183E;
   text-align: center;
   margin-block: 10px;
@@ -229,6 +229,8 @@ nav{
   position: relative;
   display: flex;
   margin: 50px;
+  width: 90%;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -242,6 +244,7 @@ nav{
   text-align: center;
   transition-property: background-color,  box-shadow;
   transition-duration: 2s;
+  margin-bottom: 2em;
 }
 
 .category-card:hover /* :hover => when mouse move over the element*/ {
@@ -292,6 +295,8 @@ nav{
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 60px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .top-bg{
@@ -309,6 +314,7 @@ nav{
   overflow: hidden;
   box-shadow: 0 100px 80px rgba(0,0,0,0.02);
   z-index: 1;
+  margin-bottom: 2em;
 }
 
 .trip-pic{
@@ -316,8 +322,8 @@ nav{
 }
 
 .trip-details{
-  padding: 25px;
-  font-size: 18px;
+  padding: 1.5em;
+  font-size: 1em;
   color: var(--site-font-color);
 }
 
@@ -325,11 +331,11 @@ nav{
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 1em;
 }
 
 .trip-details-duration span{
-  margin-left: 12px;
+  margin-left: 0.8em;
 }
 
 .trip-details-duration::before{
@@ -345,7 +351,7 @@ nav{
 
 .booking-steps{
   width: 50%;
-  margin-bottom: 130px;
+  margin-bottom: 8em;
 }
 /*.booking-steps .section-title, .booking-steps .section-heading*/
 .booking-steps :where(.section-title, .section-heading){  
@@ -355,13 +361,13 @@ nav{
 .booking-step{
   display: flex;
   justify-content: space-between;
-  margin-top: 48px;
+  margin-top: 3em;
   width: 400px;
   color: var(--site-font-color);
 }
 
 .booking-step-icon{
-  width: 48px;
+  width: 3em;
 }
 
 .booking-step-icon{
@@ -449,3 +455,152 @@ matrix() matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()
     opacity: 100%;
   }
 }
+
+
+/* @media media-type(screen,print, all) orientation(Landscape or portrait) height width */
+
+/*break points */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #container{
+    width: 100%;
+    padding-inline: 2em;
+  }
+  .nav-ul{
+    display: none;
+  }
+  .main-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .traveler-img{
+    display: none;
+  }
+  .slide-description{
+    width: 80%;
+  }
+  .slide-cta{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-between;
+  }
+  .play-demo-button{
+    margin-left: 0px;
+  }
+  .top-bg{
+    display: none;
+  }
+
+  .top-selling-card{
+    width: 80%;
+  }
+  
+  .booking{
+    flex-direction: column;
+  }
+  .booking-steps{
+    width: 80%;
+  }
+  .booking-step{
+    width: 100%;
+  }
+  .booking-step-description{
+    width: 80%;
+  }
+  .booking-card{
+    width: 100%;
+  }
+  .booking-card img{
+    position: relative;
+    top: -240px;
+  }
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  #container{
+    width: 100%;
+    padding-inline: 2em;
+  }
+  .main-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .traveler-img{
+    height: 60%;
+    bottom: 0px;
+    right: 0px;
+  }
+  .slide-description{
+    width: 100%;
+  }
+  .slide-description p{
+    width: 60%;
+  }
+  .slide-cta{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-between;
+  }
+  .play-demo-button{
+    margin-left: 0px;
+  }
+  .top-bg{
+    display: none;
+  }
+
+  .top-selling-card{
+    width: 80%;
+  }
+  
+  .booking{
+    flex-direction: column;
+  }
+  .booking-steps{
+    width: 80%;
+  }
+  .booking-step{
+    width: 100%;
+  }
+  .booking-step-description{
+    width: 80%;
+  }
+  .booking-card{
+    width: 100%;
+  }
+  .booking-card img{
+    position: relative;
+    top: -240px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  #container{
+    width: 100%;
+    padding-inline: 2em;
+  }
+  .traveler-img{
+    right: -50px;
+    height: 75%;
+  }
+  .decore-line{
+    display: none;
+  }
+  .slide-description{
+    padding-top: 3em;
+  }
+  .top-bg{
+    display: none;
+  }
+}
+
