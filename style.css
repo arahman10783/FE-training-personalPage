@@ -31,7 +31,7 @@ finding path
 */
 
 :root{
-  --site-font-color : #5E6282;
+  --site-font-color : #5E6282; /* add variable to be used in the style*/
   --big-heading-font: Volkhov, sans-serif
 }
 
@@ -48,6 +48,20 @@ finding path
 @font-face {
   font-family: Poppins;
   src: url("fonts/Poppins.ttf");
+}
+
+@keyframes bannerImage {
+  0%{
+    right: -700px;
+    opacity: 0;
+  }
+  50%{
+    opacity: 100%;
+  }
+  100%{
+    right: 50px;
+    opacity: 100%;
+  }
 }
 
 body {
@@ -101,14 +115,14 @@ nav{
   position: absolute;
   right: 50px;
   height: 90%;
-  /* animation-name: bannerImage;
-  animation-duration: 5s;
+  animation-name: bannerImage;
+  /*animation-duration: 5s;
   animation-delay: 0.5s;
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-fill-mode: both;
   animation-direction: normal; */
-  /* animation: bannerImage 5s ease 0.5s 1 normal both; */
+  animation: bannerImage 5s ease 0.5s 1 normal both;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
   
 }
@@ -442,19 +456,7 @@ skew()
 matrix() matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
 */
 
-@keyframes bannerImage {
-  0%{
-    right: -700px;
-    opacity: 0;
-  }
-  50%{
-    opacity: 100%;
-  }
-  100%{
-    right: 50px;
-    opacity: 100%;
-  }
-}
+
 
 
 /* @media media-type(screen,print, all) orientation(Landscape or portrait) height width */
