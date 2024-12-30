@@ -1,181 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <!-- viewport tell the browser how to behave with different sizes-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="style.css" rel="styleSheet" />
 
-
 </head>
+
 <body>
-  <div id="container">  
-    <header>
-      <img src="images/Logo.svg" width="115" height="34" />
-      <nav>
-        <ul class="nav-ul">
-          <li class="nav-list">Home</li>
-          <li class="nav-list">Personal</li>
-          <li class="nav-list">Portoflio</li>
-          <li class="nav-list">Contact </li>
+  <div class="container-xl">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="images/Logo.svg" alt="Website Logo" />
+        </a>
+        <ul class="nav justify-content-around">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown link
+              </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
-      </nav>  
-    </header>
-    <main>
-      <div class="main-banner">
-        <img src="images/traveller-img.png" class="traveler-img" />
-        <div class="slide-description">
-          <h4>Best Destinations around the world</h4>
-          <div class="big-title">
-            <h1>Travel, enjoy and live a new and full life</h1>
-            <img class="decore-line" src="images/Decore.svg" />
+      </div>
+    </nav>
+    <div class="container">
+      <img src="images/traveller-img.png" class="traveler-img" />
+
+      <div class="slide-description">
+        <h4>Best Destinations around the world</h4>
+        <div class="big-title">
+          <h1>Travel, enjoy and live a new and full life</h1>
+          <img class="decore-line" src="images/Decore.svg" />
+        </div>
+        <p>Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening.
+          Park gate sell they west hard for the.</p>
+        <!-- cta : Call to Action -->
+        <div class="slide-cta">
+          <button role="button" type="button" class="find-out-button"> Find out more </button>
+          <button role="button" class="play-demo-button">
+            <img src="images/Play-button.png" alt="play demo icon" />
+            <span>Play Demo </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4 mb-4">
+      <img class="ctegory-bg" src="images/ctegory-bg.svg" />
+      <p class="section-title">CATEGORY</p>
+      <h2 class="section-heading mb-4">We Offer Best Services</h2>
+
+      <div class="row justify-content-evenly mt-4"><!-- flex direction row-->
+        <div class="card col-12 col-md-6 col-lg-3 category-card">
+          <div class="category-image-container">
+            <img src="images/calculated-weather.png" />
           </div>
-          <p>Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
-          <!-- cta : Call to Action -->
-          <div class="slide-cta"> 
-            <button role="button" type="button" class="find-out-button"> Find out more </button>
-            <button role="button" class="play-demo-button"> 
-              <img src="images/Play-button.png" alt = "play demo icon"/>
-              <span>Play Demo </span>
-              
-            </button>
+          <div class="card-body">
+            <h4 class="card-title">Calculated Weather </h4>
+            <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
+          </div>
+        </div>
+        <div class="card col-12 col-md-6 col-lg-3 category-card">
+          <div class="category-image-container">
+            <img src="images/calculated-weather.png" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Calculated Weather </h4>
+            <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
+          </div>
+        </div>
+        <div class="card col-12 col-md-6 col-lg-3 category-card">
+          <div class="category-image-container">
+            <img src="images/calculated-weather.png" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Calculated Weather </h4>
+            <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
+          </div>
+        </div>
+        <div class="card col-12 col-md-6 col-lg-3 category-card">
+          <div class="category-image-container">
+            <img src="images/calculated-weather.png" />
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Calculated Weather </h4>
+            <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="categories">
-        <img class="ctegory-bg" src="images/ctegory-bg.svg" />
-        <p class="section-title">CATEGORY</p>
-        <h2 class="section-heading">We Offer Best Services</h2>
-
-        <div class="categories-container">
-          <div class="category-card">
-            <div class="category-image-container">
-              <img src="images/calculated-weather.png" />
-            </div>
-            <h4>Calculated Weather </h4>
-            <p>Built Wicket longer admire do barton vanity itself do in it.</p>
-          </div>
-          <div class="category-card">
-            <div class="category-image-container">
-              <img style="bottom: 36px;" src="images/flights.png" />
-            </div>
-            <h4>Calculated Weather </h4>
-            <p>Built Wicket longer admire do barton vanity itself do in it.</p>
-          </div>
-          <div class="category-card">
-            <div class="category-image-container">
-              <img src="images/events.png" />
-            </div>
-            <h4>Calculated Weather </h4>
-            <p>Built Wicket longer admire do barton vanity itself do in it.</p>
-          </div>
-          <div class="category-card">
-            <div class="category-image-container">
-              <img src="images/customioze.png" />
-            </div>
-            <h4>Calculated Weather </h4>
-            <p>Built Wicket longer admire do barton vanity itself do in it.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="top-selling">
-        <p class="section-title">Top Selling</p>
-        <h2 class="section-heading">Top Destinations</h2>
-        <div class="top-selling-container">
-          <img src="images/top-bg.svg" class="top-bg" />
-          <div class="top-selling-card">
-            <img src="images/rome.webp" class="trip-pic" alt="" />
-            <div class="trip-details">
+    <div class="container mt-4 mb-4">
+      <p class="section-title">CATEGORY</p>
+      <h2 class="section-heading mb-4">We Offer Best Services</h2>
+      <div class="row gx-5">
+        <div class="col-12 col-md-4">
+          <div class="card p-0">
+            <img src="images/london.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
               <div class="trip-details-price">
                 <span>Rome, Italy</span>
                 <span>$5,42k</span>
               </div>
               <div class="trip-details-duration">
-                <span>10 Days Trip</span>
-              </div>
-            </div>
-          </div>
-          <div class="top-selling-card">
-            <img src="images/london.jpg" class="trip-pic" alt="" />
-            <div class="trip-details">
-              <div class="trip-details-price">
-                <span>London, UK</span>
-                <span>$5,42k</span>
-              </div>
-              <div class="trip-details-duration">
-                <span>10 Days Trip</span>
-              </div>
-            </div>
-          </div>
-          <div class="top-selling-card">
-            <img src="images/erop.jpg" class="trip-pic" alt="" />
-            <div class="trip-details">
-              <div class="trip-details-price">
-                <span>Europa</span>
-                <span>$5,42k</span>
-              </div>
-              <div class="trip-details-duration">
+                <i class="bi bi-send m-1"></i>
                 <span>10 Days Trip</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="booking">
-        <div class="booking-steps">
-          <p class="section-title">Easy and Fast</p>
-          <h2 class="section-heading">Book your next trip in 3 easy steps</h2>
-
-          <div class="booking-step">
-            <div class="booking-step-icon">
-              <img src="images/choose.svg" alt="Choose Destination"/>
-            </div>
-            <div class="booking-step-description">
-              <b>Choose Destination</b>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
-
-            </div>
-          </div>
-          <div class="booking-step">
-            <div class="booking-step-icon">
-              <img src="images/make.svg" alt="Choose Destination"/>
-            </div>
-            <div class="booking-step-description">
-              <b>Make Payment</b>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
-
-            </div>
-          </div>
-          <div class="booking-step">
-            <div class="booking-step-icon">
-              <img src="images/reach.svg" alt="Choose Destination"/>
-            </div>
-            <div class="booking-step-description">
-              <b>Reach Airport on Selected Date</b>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
-
+        <div class="col-12 col-md-4">
+          <div class="card p-0">
+            <img src="images/london.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="trip-details-price">
+                <span>Rome, Italy</span>
+                <span>$5,42k</span>
+              </div>
+              <div class="trip-details-duration">
+                <i class="bi bi-send m-1"></i>
+                <span>10 Days Trip</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="booking-card">
-          <img src="images/booking-steps.png" />
+        <div class="col-12 col-md-4">
+          <div class="card p-0">
+            <img src="images/london.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="trip-details-price">
+                <span>Rome, Italy</span>
+                <span>$5,42k</span>
+              </div>
+              <div class="trip-details-duration">
+                <i class="bi bi-send m-1"></i>
+                <span>10 Days Trip</span>
+              </div>
+            </div>
+          </div>
         </div>
         
+
+
       </div>
-  
-    </main>
-  
-    <footer>
-      <p>All rights reserved</p>
-    </footer>
+
+
+
+
+
+    </div>
   </div>
-  
 
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

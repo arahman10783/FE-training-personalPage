@@ -1,35 +1,3 @@
-/* Selectors : 
-  1- Tag Name 
-  2- class .nav-list
-  3- id #container
-*/
-
-/* 
-margin : space between element and the parent
-padding: space between element and the child
-border: border size
-*/
-
-/* display */
-/*
-block: take all row space. no elements beside it.
-inline: accept elements to be beside it, its content width 
-
-flex : "FlexBox"
-1- Flex container
-  flex-direction
-  justify-content
-  flex-wrap
-  */
-
-
-/* 
-finding path
-  path = / => first level of the server // not preferred to be used 
-  path = ./ => current level of the file = folder-name ex (./images = images)
-  path = ../ => parent level of the file
-*/
-
 :root{
   --site-font-color : #5E6282; /* add variable to be used in the style*/
   --big-heading-font: Volkhov, sans-serif
@@ -74,20 +42,12 @@ body {
   background-color: rgba(221, 221, 221, 0.2);
   overflow-x: hidden;
 }
-
-#container {
+.nav-link{
+  color: #212832;
+}
+.container{
   position: relative;
-  margin: auto;
-  width: 1200px;
 }
-
-
-header{
-  padding-top: 48px;
-  display: flex;
-  justify-content: space-between;
-}
-
 nav{
   display: inline;
 }
@@ -252,8 +212,6 @@ nav{
   position: relative;
   background-color: rgba(221, 221, 221, 0);
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-  width: 268px;
-  height: 314px;
   border-radius: 36px;
   text-align: center;
   transition-property: background-color,  box-shadow;
@@ -279,6 +237,11 @@ nav{
 .category-image-container img{
     position: relative;
     bottom: 0;
+}
+
+.category-card{
+  border-color: transparent;
+  border-width: 0px;
 }
 
 .category-card h4{
@@ -346,16 +309,6 @@ nav{
   width: 100%;
   justify-content: space-between;
   margin-bottom: 1em;
-}
-
-.trip-details-duration span{
-  margin-left: 0.8em;
-}
-
-.trip-details-duration::before{
-  content: url("images/Vector.svg");
-  position: relative;
-  top: 2px;
 }
 
 .booking{
